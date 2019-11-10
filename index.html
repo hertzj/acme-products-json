@@ -41,7 +41,7 @@
     <script type='text/babel'>
       const Departments = ({ users, departments, offices, match})=> {
         const department = departments.find( department => department.id === match.params.id) || {};
-        const filtered = users.filter( user => (+user.department_id === +match.params.id) || ( !match.params.id && !user.department_id));
+        const filtered = users.filter( user => (user.department_id === match.params.id) || ( !match.params.id && !user.department_id));
         console.log(match)
         return (
           <div>
